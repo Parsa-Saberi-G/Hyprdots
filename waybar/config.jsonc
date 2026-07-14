@@ -1,0 +1,207 @@
+{
+    "layer": "top",
+    "position": "top",
+    "spacing": 5,
+
+    "modules-left": [
+        "clock",
+        "custom/notification",
+        "hyprland/language",
+        "cpu",
+        "memory",
+        
+    ],
+
+    "modules-center": [
+        "hyprland/workspaces"
+    ],
+
+    "modules-right": [
+        "backlight/slider",
+        "custom/backlight",
+        "pulseaudio/slider#out",
+        "pulseaudio",
+        "bluetooth",
+        "network"
+    ],
+
+    "clock": {
+        "interval": 1,
+        "format": "\uf4ab {:%H:%M}",
+        "format-alt": "󰃭 {:%A %d %B %Y}",
+        "tooltip-format": "<tt><small>{calendar}</small></tt>",
+
+        "calendar": {
+            "mode": "year",
+            "mode-mon-col": 3,
+            "weeks-pos": "right",
+            "first-day-of-week": 1,
+            "on-scroll": 1,
+            "on-click-right": "mode",
+
+            "format": {
+                "months": "<span color='#ffead3'><b>{}</b></span>",
+                "days": "<span color='#ecc6d9'><b>{}</b></span>",
+                "weeks": "<span color='#99ffdd'><b>W{}</b></span>",
+                "weekdays": "<span color='#ffcc66'><b>{}</b></span>",
+                "today": "<span color='#ff6699'><b><u>{}</u></b></span>"
+            }
+        }
+    },
+
+    "tray": {
+        "spacing": 10
+    },
+
+    "custom/notification": {
+        "tooltip": true,
+        "format": "{icon}",
+        "return-type": "json",
+
+        "format-icons": {
+            "notification": "󱅫",
+            "none": "󰂜",
+            "dnd-notification": "󰂠",
+            "dnd-none": "󰪓",
+            "inhibited-notification": "󰂛",
+            "inhibited-none": "󰪑",
+            "dnd-inhibited-notification": "󰂛",
+            "dnd-inhibited-none": "󰪑"
+        },
+
+        "exec-if": "which swaync-client",
+        "exec": "swaync-client -swb",
+
+        "on-click": "swaync-client -t -sw",
+        "on-click-right": "swaync-client -d -sw",
+
+        "escape": true
+    },
+
+
+    "hyprland/workspaces": {
+	"format": "{windows}",
+	"format-window-separator": "|",
+	"window-rewrite-default": "\uf128",
+        "window-rewrite": {
+            "title<.*youtube.*>": "",
+            "class<firefox>": "",
+            "class<firefox> title<.*github.*>": "\ue709",
+            "class<kitty>": "\uf120",
+            "class<*codium*>": "\uf372",
+            "class<*minecraft*>": "\udb80\udf73",
+            "class<*thunar*>": "\uf4d3",
+            "class<*vlc*>": "\udb81\udd7c",
+            "class<scrcpy>": "\ue70e",
+            "class<kitty>": "",
+            "class<chromium>": "",
+            "class<org.telegram.desktop>": "\uf2c6",
+            "class<discord>": "",
+            "class<Spotify>": "",
+            "class<spotify>": "",
+            "class<vlc>": "󰕼",
+            "class<mpv>": "",
+            "class<Steam>": "",
+            "class<steam>": "",
+            "class<lutris>": "󰺵",
+            "class<Gimp>": "",
+            "class<org.kde.gwenview>": "",
+            "class<nm-connection-editor>": "󰤨",
+            "class<pavucontrol>": "󰕾",
+            "class<org.gnome.Settings>": "",
+            "class<Systemsettings>": "",
+            "class<calibre>": ""
+            }
+    
+    },
+    
+
+    "cpu": {
+        "interval": 1,
+        "format": " {usage}%",
+        "tooltip": true,
+
+    },
+
+    "memory": {
+        "interval": 5,
+        "format": "\uefc5{}%"
+    },
+
+    "network": {
+        "format-wifi": "",
+        "format-ethernet": "󰈀 Ethernet",
+        "format-linked": "󰈀 Connected",
+        "format-disconnected": "󰖪",
+        "tooltip-format": "{ifname}",
+        "tooltip-format-wifi": "{essid}",
+        "max-length": 20
+    },
+
+    "bluetooth": {
+        "format": "",
+        "format-connected": "",
+        "format-disabled": "󰂲",
+        "tooltip-format": "{device_alias}"
+    },
+
+    "pulseaudio": {
+
+        "scroll-step": 2,
+
+        "format": "{icon}",
+        "format-muted": "󰝟",
+
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "󰂑",
+            "headset": "󰂑",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": [
+                "",
+                "",
+                ""
+            ]
+        },
+
+        "on-click": "pavucontrol"
+    },
+
+    "pulseaudio/slider#out": {
+
+        "min": 0,
+        "max": 100,
+
+        "orientation": "horizontal",
+
+        "zero-on-mute": false,
+        "unmute-on-volume-change": true
+    },
+
+    "backlight/slider": {
+
+        "device": "intel_backlight",
+
+        "min": 1,
+        "max": 100,
+
+        "orientation": "horizontal"
+    },
+
+
+    "hyprland/language": {
+
+        "format": "{shortDescription}",
+        "on-click": "hyprctl switchxkblayout all next"
+    },
+
+    "custom/backlight": {
+        "exec": "~/.config/waybar/scripts/brightness.sh",
+        "return-type": "json",
+        "interval": 1,
+        "tooltip": true,
+    }
+    
+}

@@ -1,0 +1,254 @@
+@import "colors.css";
+
+/* ==========================
+   Global
+========================== */
+
+* {
+    font-family: "CaskaydiaCove Nerd Font Propo", "Symbols Nerd Font", sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+    min-height: 0px;
+    border: none;
+    transition: all .25s ease-in-out;
+}
+
+window#waybar {
+    background: transparent;
+    color: @text;
+}
+
+/* ==========================
+   Tooltip
+========================== */
+
+tooltip {
+    background: @module;
+    border: 1px solid @border;
+    border-radius: 16px;
+}
+
+tooltip label {
+    color: @text;
+    padding: 8px;
+}
+
+/* ==========================
+   LEFT / CENTER / RIGHT BOXES
+========================== */
+
+.modules-left,
+.modules-center,
+.modules-right {
+
+    background: @bg;
+
+    border: 1px solid @border;
+
+    border-radius: 16px;
+
+    padding: 3px 3px;
+
+    margin: 3px;
+}
+
+/* ==========================
+   COMMON MODULE STYLE
+========================== */
+
+#clock,
+#custom-backlight,
+#tray,
+#custom-notification,
+#language,
+#cpu,
+#memory,
+#bluetooth,
+#network,
+#pulseaudio,
+#backlight {
+
+    background: transparent;
+
+    color: @text;
+
+    padding: 0px 5px;
+
+    margin: 3px;
+
+    border-radius: 12px;
+}
+
+/* ==========================
+   HOVER
+========================== */
+
+#clock:hover,
+#tray:hover,
+#custom-notification:hover,
+#language:hover,
+#cpu:hover,
+#memory:hover,
+#bluetooth:hover,
+#network:hover,
+#pulseaudio:hover,
+#backlight:hover {
+
+    background: @bg-light;
+}
+
+/* ==========================
+   COLORS
+========================== */
+
+#clock {
+    color: @accent;
+}
+
+#cpu {
+    color: @warning;
+}
+
+#memory {
+    color: @info;
+}
+
+#network {
+    color: @success;
+}
+
+#bluetooth {
+    color: @accent2;
+}
+
+#pulseaudio {
+    color: @accent;
+}
+
+#custom-notification {
+    color: @danger;
+}
+
+/* ==========================
+   WORKSPACES
+========================== */
+
+#workspaces {
+
+    background: transparent;
+
+    padding: 2px;
+
+    margin: 0;
+}
+
+#workspaces button {
+
+    background: transparent;
+
+    color: @text-muted;
+
+    margin: 3px;
+
+    padding: 0 14px;
+
+    border-radius: 12px;
+}
+
+#workspaces button:hover {
+
+    background: @accent2;
+
+    color: @background;
+}
+
+#workspaces button.active {
+
+    background: @accent;
+
+    color: @background;
+
+    min-width: 30px;
+}
+
+#workspaces button.urgent {
+
+    background: @danger;
+
+    color: @background;
+}
+
+
+trough {
+    min-height: 8px;
+    border-radius: 999px;
+    background: @bg-light;
+}
+
+highlight {
+    min-height: 8px;
+    border-radius: 999px;
+    background: @accent;
+}
+
+slider {
+    min-width: 10px;
+    min-height: 10px;
+    border-radius: 999px;
+
+    background: @foreground;
+}
+
+
+/* ==========================
+   TRAY
+========================== */
+
+#tray>.passive {
+    opacity: .3;
+}
+
+#tray>.needs-attention {
+
+    color: @danger;
+}
+
+/* ==========================
+   DISCONNECTED
+========================== */
+
+#network.disconnected {
+
+    color: @danger;
+}
+
+/* ==========================
+   MUTED
+========================== */
+
+#pulseaudio.muted {
+
+    color: @text-muted;
+}
+
+/* ==========================
+   BLUETOOTH OFF
+========================== */
+
+#bluetooth.disabled {
+
+    color: @text-muted;
+}
+
+scale {
+    min-width: 40px;
+}
+
+#custom-backlight {
+    color: @accent;
+
+}
+.modules-right {
+    margin: 0px 0px;
+    padding: 0px 0px;
+}

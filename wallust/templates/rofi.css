@@ -1,13 +1,30 @@
-*{
-    background: {{background}};
-    background-alt: {{background}};
+* {
 
+    background: {{background}};
     foreground: {{foreground}};
 
-    selected: {{color4}};
+    bg: alpha({{background}},0.82);
+    bg-solid: alpha({{background}},0.95);
+    bg-light: alpha({{background}},0.65);
 
-    border-color: #757575;
+    module: alpha({{background}},0.90);
+    module-hover: alpha({{background}},0.98);
 
-    active: {{color2}};
-    urgent: {{color1}};
+    text: {{foreground}};
+    text-muted: {{color7}};
+
+    accent: {{color4}};
+    accent2: {{color5}};
+
+    success: {{color2}};
+    warning: {{color3}};
+    danger: {{color1}};
+    info: {{color6}};
+
+    border: {{color8}};
+
+    grad1: {{color4}};
+    grad2: {{color5}};
+    grad3: {{color6}};
+    grad4: {{color2}};
 }

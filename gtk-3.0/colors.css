@@ -1,5 +1,27 @@
-@define-color theme_bg_color #070402;
-@define-color theme_fg_color #E9EC6C;
-@define-color theme_selected_bg_color #777C2F;
-@define-color theme_selected_fg_color #E9EC6C;
+@define-color background #152F08;
+@define-color foreground #DDDFDA;
 
+@define-color bg alpha(#152F08,0.82);
+@define-color bg-solid alpha(#152F08,0.95);
+@define-color bg-light alpha(#152F08,0.65);
+
+@define-color module alpha(#152F08,0.90);
+@define-color module-hover alpha(#152F08,0.98);
+
+@define-color text #DDDFDA;
+@define-color text-muted #6C6D40;
+
+@define-color accent #C7D53E;
+@define-color accent2 #BCC832;
+
+@define-color success #E88EA8;
+@define-color warning #C5E240;
+@define-color danger #EDF25D;
+@define-color info #DB7C2A;
+
+@define-color border #A7AA64;
+
+@define-color grad1 #C7D53E;
+@define-color grad2 #BCC832;
+@define-color grad3 #DB7C2A;
+@define-color grad4 #E88EA8;

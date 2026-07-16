@@ -1,5 +1,27 @@
-@define-color theme_bg_color {{background}};
-@define-color theme_fg_color {{foreground}};
-@define-color theme_selected_bg_color {{color4}};
-@define-color theme_selected_fg_color {{foreground}};
+@define-color background {{background}};
+@define-color foreground {{foreground}};
 
+@define-color bg alpha({{background}},0.82);
+@define-color bg-solid alpha({{background}},0.95);
+@define-color bg-light alpha({{background}},0.65);
+
+@define-color module alpha({{background}},0.90);
+@define-color module-hover alpha({{background}},0.98);
+
+@define-color text {{foreground}};
+@define-color text-muted {{color7}};
+
+@define-color accent {{color4}};
+@define-color accent2 {{color5}};
+
+@define-color success {{color2}};
+@define-color warning {{color3}};
+@define-color danger {{color1}};
+@define-color info {{color6}};
+
+@define-color border {{color8}};
+
+@define-color grad1 {{color4}};
+@define-color grad2 {{color5}};
+@define-color grad3 {{color6}};
+@define-color grad4 {{color2}};

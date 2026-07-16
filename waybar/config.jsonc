@@ -1,9 +1,10 @@
 {
     "layer": "top",
     "position": "top",
-    "spacing": 5,
+    "spacing": 3,
 
     "modules-left": [
+        "custom/logo",
         "clock",
         "custom/notification",
         "hyprland/language",
@@ -22,7 +23,8 @@
         "pulseaudio/slider#out",
         "pulseaudio",
         "bluetooth",
-        "network"
+        "network",
+        "custom/powermenu"
     ],
 
     "clock": {
@@ -81,7 +83,7 @@
 
     "hyprland/workspaces": {
 	"format": "{windows}",
-	"format-window-separator": "|",
+	"format-window-separator":"|",
 	"window-rewrite-default": "\uf128",
         "window-rewrite": {
             "title<.*youtube.*>": "",
@@ -202,6 +204,16 @@
         "return-type": "json",
         "interval": 1,
         "tooltip": true,
+    },
+
+    "custom/logo": {
+        "format": "\uf303",
+        "on-click": "rofi show -drun",
+
+    },
+    "custom/powermenu": {
+        "format": "\uf011",
+        "on-click": "~/.config/rofi/scripts/powermenu.sh"
     }
     
 }

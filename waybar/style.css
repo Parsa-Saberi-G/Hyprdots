@@ -6,16 +6,16 @@
 
 * {
     font-family: "CaskaydiaCove Nerd Font Propo", "Symbols Nerd Font", sans-serif;
-    font-size: 13px;
+    font-size: 14px;
     font-weight: bold;
     min-height: 0px;
     border: none;
-    transition: all .25s ease-in-out;
+    transition: all .3s ease-in-out;
 }
 
 window#waybar {
     background: transparent;
-    color: @text;
+    color: @border;
 }
 
 /* ==========================
@@ -23,13 +23,13 @@ window#waybar {
 ========================== */
 
 tooltip {
-    background: @module;
+    background: @bg;
     border: 1px solid @border;
-    border-radius: 16px;
+    border-radius: 5px;
 }
 
 tooltip label {
-    color: @text;
+    color: @foreground;
     padding: 8px;
 }
 
@@ -41,15 +41,15 @@ tooltip label {
 .modules-center,
 .modules-right {
 
-    background: @bg;
+    background: @background;
 
     border: 1px solid @border;
 
-    border-radius: 16px;
+    border-radius: 8px;
 
-    padding: 3px 3px;
+    padding: 0px 3px;
 
-    margin: 3px;
+    margin: 1px 1px 1px 1px;
 }
 
 /* ==========================
@@ -60,7 +60,6 @@ tooltip label {
 #custom-backlight,
 #tray,
 #custom-notification,
-#language,
 #cpu,
 #memory,
 #bluetooth,
@@ -76,7 +75,7 @@ tooltip label {
 
     margin: 3px;
 
-    border-radius: 12px;
+    border-radius: 8px;
 }
 
 /* ==========================
@@ -94,7 +93,7 @@ tooltip label {
 #pulseaudio:hover,
 #backlight:hover {
 
-    background: @bg-light;
+    background: @module-hover;
 }
 
 /* ==========================
@@ -102,32 +101,49 @@ tooltip label {
 ========================== */
 
 #clock {
-    color: @accent;
+    color: @grad1;
+}
+
+#hypr-language {
+    color: @text-muted;
 }
 
 #cpu {
-    color: @warning;
+    color: @grad4;
 }
 
 #memory {
-    color: @info;
+    color: @grad4;
 }
 
 #network {
-    color: @success;
+    color: @danger;
 }
 
 #bluetooth {
     color: @accent2;
 }
 
+#volume-slider {
+    color: @warning;
+}
+
+#backlight-slider {
+    color: @warning;
+}
+
+#custom-backlight{
+    color: @warning;
+}
+
 #pulseaudio {
-    color: @accent;
+    color: @warning;
 }
 
 #custom-notification {
-    color: @danger;
+    color: @color5;
 }
+
 
 /* ==========================
    WORKSPACES
@@ -146,36 +162,36 @@ tooltip label {
 
     background: transparent;
 
-    color: @text-muted;
+    color: @warning;
 
     margin: 3px;
 
     padding: 0 14px;
 
-    border-radius: 12px;
+    border-radius: 5px;
 }
 
 #workspaces button:hover {
 
-    background: @accent2;
+    background: @border;
 
     color: @background;
 }
 
 #workspaces button.active {
 
-    background: @accent;
+    background: @text-muted;
 
-    color: @background;
+    color: @warning;
 
-    min-width: 30px;
+    min-width: 50px;
 }
 
 #workspaces button.urgent {
 
-    background: @danger;
+    background: @background;
 
-    color: @background;
+    color: @foreground;
 }
 
 
@@ -196,7 +212,7 @@ slider {
     min-height: 10px;
     border-radius: 999px;
 
-    background: @foreground;
+    background: @color0;
 }
 
 
@@ -219,7 +235,7 @@ slider {
 
 #network.disconnected {
 
-    color: @danger;
+    color: rgb(107, 8, 8) ;
 }
 
 /* ==========================
@@ -244,11 +260,18 @@ scale {
     min-width: 40px;
 }
 
-#custom-backlight {
-    color: @accent;
 
+#custom-logo {
+    color: @color0;
+    font-size: 18px;
+    margin: 5px;
 }
-.modules-right {
-    margin: 0px 0px;
-    padding: 0px 0px;
+#custom-powermenu {
+    color: @color0;
+    font-size: 18px;
+        margin: 5px;
+}
+#hyprland-language {
+    color: @warning;
+    
 }
